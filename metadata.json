@@ -1,0 +1,6 @@
+{
+  "name": "猜數字遊戲",
+  "description": "進階猜數字對戰遊戲：支援單人、多人輪流及電腦 AI 對戰模式。包含難度選擇、最佳策略建議（二分法）、視覺化範圍追蹤及詳細數據統計與歷史歷程。",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
