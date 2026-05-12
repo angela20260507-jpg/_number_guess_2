@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 猜數字遊戲 (Number Guess Game)
 
-# Run and deploy your AI Studio app
+這是一個功能豐富的猜數字對戰遊戲，支援多種模式與精美介面。
 
-This contains everything you need to run your app locally.
+## 核心功能
 
-View your app in AI Studio: https://ai.studio/apps/5453ace6-af4a-4a75-affe-5e0e0434eea4
+- **多種模式**：支援單人、雙人對戰及電腦 AI 對戰模式。
+- **難度選擇**：提供簡單、中等、困難三種預設難度，並支援自訂範圍。
+- **視覺化範圍**：直觀顯示目前的數字範圍，並追蹤每一次的猜測。
+- **最佳策略建議**：內建二分搜尋法建議，幫助你用最少的次數猜中數字。
+- **詳細統計**：追蹤勝率、平均猜測次數及歷史紀錄。
 
-## Run Locally
+## 如何運行
 
-**Prerequisites:**  Node.js
+1. **安裝依賴**：
+   ```bash
+   npm install
+   ```
 
+2. **啟動開發伺服器**：
+   ```bash
+   npm run dev
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3. **構建項目**：
+   ```bash
+   npm run build
+   ```
+
+## 技術棧
+
+- **前端**：React 19, TypeScript
+- **動畫**：Motion (formerly Framer Motion)
+- **圖標**：Lucide React
+- **樣式**：Tailwind CSS (Vite Plugin)

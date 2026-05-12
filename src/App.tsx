@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { RefreshCcw, Send, Trophy, Hash, RotateCcw, AlertCircle, Settings2, BarChart3, Clock, Target, Skull } from 'lucide-react';
+import { RefreshCcw, Send, Trophy, Hash, Settings2, BarChart3, Clock, Target, Skull } from 'lucide-react';
 
 /**
  * 難度等級型別
@@ -635,19 +635,13 @@ export default function App() {
                     <div className="space-y-4 overflow-y-auto pr-2 custom-scrollbar flex-1 max-h-[500px]">
                       <AnimatePresence initial={false}>
                         {(() => {
-                          const allDetails = state.players.flatMap(p => p.attemptDetails.map(d => ({ ...d, playerName: p.name, playerId: p.id })));
-                          allDetails.sort((a, b) => {
-                             // 這裡其實應該記一個總順序，但如果是輪流，可以用 attempts 數量推斷
-                             // 為了方便，我們展示當前活躍玩家的歷史，或者是所有玩家的交叉合併
-                             return 0; 
-                          });
 
                           // 展示當前玩家或者是所有玩家的合併
                           const visibleDetails = state.config.mode === 'single' 
                             ? state.players[0]?.attemptDetails || []
                             : state.players.flatMap(p => p.attemptDetails.map(d => ({ ...d, playerName: p.name, playerId: p.id })));
 
-                          return [...visibleDetails].reverse().map((detail: any, idx) => {
+                          return [...visibleDetails].reverse().map((detail, idx) => {
                             const count = visibleDetails.length - idx;
                             const shrinking = detail.rangeBefore[1] - detail.rangeBefore[0] - (detail.rangeAfter[1] - detail.rangeAfter[0]);
                             return (
@@ -749,5 +743,3 @@ export default function App() {
     </div>
   );
 }
-
-
